@@ -1,0 +1,108 @@
+.about-section7-container-slider {
+  overflow: hidden;
+  //   overflow-x: scroll;
+  position: relative;
+  display: flex;
+  background: #fff;
+  // box-shadow: 0 11px 20px rgb(123 149 162/15%);
+  margin: 10px auto;
+  padding: 60px 30px;
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  // width: auto;
+  border-radius: 40px 8px 8px;
+}
+
+.customer-details-container-about-section-7 {
+  display: flex;
+  gap: 35px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  img {
+    height: 365px;
+    width: 300px;
+    box-shadow: -20px 20px 35px #dcdcdc, 20px -40px 35px #fff;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  .name {
+    color: #050748;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  .poste {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.pagination-container-about-section-7 {
+  position: sticky;
+  // bottom: 5px;
+  top : 100%;
+  height: fit-content;
+  right: 5px;
+  align-items: flex-end;
+  z-index: 5;
+  display: flex;
+  gap: 10px;
+}
+
+%pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15px;
+  width: 15px;
+}
+
+.pagination-simple {
+  border: none;
+  @extend %pagination;
+  span {
+    display: block;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(250, 177, 177);
+    border-radius: 50%;
+  }
+}
+
+.pagination-selected {
+  @extend %pagination;
+  border: 1px solid red;
+  border-radius: 50%;
+  span {
+    display: block;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .customer-details-container-about-section-7 > * {
+    width: 95%;
+  }
+  .customer-details-container-about-section-7 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    img {
+      width: 20%;
+      height: auto;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  .customer-details-container-about-section-7 > :first-child {
+    width: 100%;
+  }
+}

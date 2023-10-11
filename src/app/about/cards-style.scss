@@ -1,0 +1,245 @@
+.title-blue,
+%title-blue {
+  font-size: 34px;
+  line-height: 46px;
+  color: #050748;
+  // font-weight: 600;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+}
+
+.title-red,
+%title-red {
+  color: rgb(230, 0, 114);
+  text-transform: uppercase;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 15px;
+  display: block;
+}
+
+.simple-about-p {
+  font-size: 17px;
+  line-height: 28px;
+  color: rgb(106, 106, 142);
+  text-align: justify;
+}
+
+.about-card1-container {
+  :first-child {
+    font-size: 35px;
+    color: #ff1f8e;
+    font-weight: bold;
+    margin: 0;
+  }
+  :last-child {
+    font-size: 18px;
+    margin: 0;
+    margin-top: 10px;
+    line-height: 24px;
+  }
+}
+
+.about-card2 {
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  h3 {
+    font-size: 34px;
+    line-height: 46px;
+    color: #050748;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-size: 17px;
+    line-height: 28px;
+    color: rgb(106, 106, 142);
+    text-align: justify;
+  }
+}
+
+.about-card-3 {
+  width: 1000px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 35px;
+  margin-top: 35px;
+  img {
+    border-radius: 8px;
+    box-shadow: -20px 20px 35px #dcdcdc, 20px -40px 35px #fff;
+  }
+}
+.about-card-3 > * {
+  width: 50%;
+}
+
+.about-card-4 {
+  background: top right no-repeat #fff;
+  background-size: 200%;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 0;
+  border: 1px solid #d4f0ff;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0 3.4px 2.7px -30px rgba(0, 0, 0, 0.059),
+    0 8.2px 8.9px -30px rgba(0, 0, 0, 0.071),
+    0 25px 40px -30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card-4 {
+  max-width: 300px;
+  height: 352px;
+  & > :nth-child(2) {
+    @extend %title-blue;
+    color: #050748;
+    font-size: 22px;
+    line-height: 32px;
+    margin: 10px 0;
+  }
+  & > :first-child {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.about-card-5 {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.about-card-5 > div:nth-child(2) {
+  h4 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+.about-card-5 > div:nth-child(1) {
+  position: absolute;
+  right: 50%;
+  top: 15px;
+  text-align: right;
+  margin-right: 40px;
+  color: #050748;
+  font-size: 22px;
+  font-weight: 600;
+  small {
+    display: block;
+    font-size: 15px;
+    padding: 8px 0 0;
+  }
+}
+
+.about-card-5 > div:nth-child(2) {
+  position: relative;
+  padding: 20px 30px;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #efefef;
+  -webkit-box-shadow: 0 10px 15px 0 rgb(0 0 0/10%);
+  box-shadow: 0 10px 15px 0 rgb(0 0 0/10%);
+}
+
+.about-card-5 > div:nth-child(2)::before {
+  right: -51px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  z-index: 10;
+  border: 2px dashed #288ced;
+  position: absolute;
+  top: 20px;
+  background: #fff;
+  content: "";
+}
+
+.about-card-5 > div:nth-child(2)::after {
+  height: 16px;
+  width: 16px;
+  border: 1px solid #efefef;
+  position: absolute;
+  top: 20px;
+  background: #fff;
+  content: "";
+}
+
+.about-card-6 {
+  box-sizing: border-box;
+  overflow: hidden;
+  * {
+    box-sizing: border-box;
+  }
+  width: 300px;
+  box-shadow: 0 20px 30px -20px rgb(0 21 167/20%);
+  border-bottom: 5px solid #b0bdff;
+  border-radius: 10px;
+  h4 {
+    font-size: 22px;
+    line-height: 32px;
+    color: #050748;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 26px;
+    color: #050748;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    padding: 0;
+  }
+  p{
+    margin: 5px 0;
+  }
+}
+
+.about-card-6 > div {
+  padding: 20px;
+  height: 50%;
+  background-color: white;
+}
+
+.about-card-6 > :first-child {
+  display: flex;
+  background: #c9c9c9;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .about-card-3 {
+    width: 100%;
+  }
+  .about-card-3 > * {
+    width: 90% !important;
+    font-size: 22px;
+    line-height: 32px;
+  }
+}

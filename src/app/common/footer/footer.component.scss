@@ -1,0 +1,134 @@
+.main-footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #3f36b9;
+  }
+  
+  .main-footer-sub {
+    padding-top: 40px;
+    display: flex;
+    color: white;
+    gap: 25px;
+    max-width: 1500px;
+    margin: 35px;
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  
+  .foot-big-container {
+    background: linear-gradient(to bottom, #edeefb 0, #f3eafb 100%);
+  }
+  
+  .main-footer-sub > :first-child {
+    h5 {
+      font-size: 32px;
+      margin: 30px 16px 30px 0;
+      font-weight: 800;
+    }
+  
+    h5 > span:first-child {
+      color: white;
+    }
+    h5 > span:last-child {
+      color: #3f36b9;
+      background-color: white;
+      padding: 6px 5px;
+      border-radius: 10px;
+    }
+    p:nth-child(2) {
+      font-size: 17px;
+      // max-width: ;
+      color: rgba(255, 255, 255, 0.637);
+    }
+  
+    p:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      button {
+        background-color: transparent;
+        //   padding: 5px;
+        height: 40px;
+        aspect-ratio: 1/1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+  
+  .main-footer-sub > :nth-child(2),
+  .main-footer-sub > :nth-child(3) {
+    h5 {
+      margin: 30px 16px 30px 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+    }
+    color: rgba(255, 255, 255, 0.637);
+  }
+  .main-footer-sub > :nth-child(2) {
+    div {
+      display: flex;
+      margin-bottom: 18px;
+      // align-items: center;
+      gap: 10px;
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        //   display: flex;
+        gap: 6px;
+        flex-direction: column;
+        align-items: flex-start;
+        p :first-child {
+          font-size: 17px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  
+  .main-footer-sub > div {
+    flex: 1;
+  }
+  
+  .up-curvs {
+    position: relative;
+    top: 25px;
+  }
+  
+  @media only screen and (max-width: 1310px) {
+    .up-curvs {
+      top: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 905px) {
+    .up-curvs {
+      top: 45px;
+    }
+  }
+  
+  @media only screen and (max-width: 650px) {
+    .main-footer-sub {
+      flex-direction: column;
+      &>:nth-child(2) {
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .up-curvs {
+      top: 55px;
+    }
+  }

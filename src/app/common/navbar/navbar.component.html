@@ -1,0 +1,57 @@
+<div class="{{ 'navbar-container ' + (colorChange ? 'onScroll' : '') }}">
+  <p (click)="(goHome)" class="link">
+    <span>BK</span>
+    <span>-</span>
+    <span>TECH</span>
+  </p>
+  <ul>
+
+    <li
+      
+      class="{{
+        (isActualRoute(el) ? 'link actualRoute' : 'link') +
+          ' ' +
+          (colorChange ? 'onLinkScroll' : '') + (isMobile ? ' hidden ' : '')
+      }}"
+      *ngFor="let el of links"
+      routerLink="{{ el.link ? el.link : '/' + el.text }}"
+    >
+      {{ el.text }}
+    </li>
+
+    <li>
+      <button class="theme-toggle-button">
+        <div></div>
+      </button>
+    </li>
+    <li>
+      <button class="quote-button">
+        {{ isMobile ? "phone" : "Demander un devis" }}
+        <span class="circle"></span>
+      </button>
+    </li>
+    <li *ngIf="isMobile" (click)="handleToggleMenu()">Menu</li>
+  </ul>
+
+  <div
+    *ngIf="isMobile && isMobNavVisible"
+    class="mobile-nav"
+    (click)="handleMobClick($event)"
+  >
+    <div class="mobile-nav-sub">
+      <p (click)="(goHome)">
+        <span>BK</span>
+        <span>-</span>
+        <span>TECH</span>
+      </p>
+      <ul>
+        <li
+          *ngFor="let el of links"
+          routerLink="{{ el.link ? el.link : '/' + el.text }}"
+        >
+          {{ el.text }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

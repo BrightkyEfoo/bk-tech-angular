@@ -1,0 +1,118 @@
+.hero-section {
+  background: #3f36b9;
+  background: -moz-linear-gradient(left, #552ecd 0, #13137a 100%);
+  background: -webkit-linear-gradient(left, #552ecd 0, #13137a 100%);
+  background: linear-gradient(to right, #552ecd 0, #13137a 100%);
+  padding: 30px;
+  height: 100vh;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section::before {
+  height: 100%;
+  width: 100%;
+  opacity: 0.03;
+  background-size: cover;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background: url(../../../assets/images/shape-12.svg);
+  background-size: cover;
+  position: absolute;
+  z-index: 5;
+}
+
+.hero-section-sub {
+  max-width: 1500px;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  z-index: 6;
+  // max-height: calc(100vh - 80px);
+  position: relative;
+  align-items: center;
+  img {
+    max-height: calc(100vh - 100px);
+  }
+  :nth-child(1) {
+    max-height: calc(100vh - 100px);
+    // width: 50%;
+    :first-child {
+      color: white;
+      font-size: 54px;
+      margin: 5px;
+      font-weight: 800;
+    }
+    @for $i from 2 through 4 {
+      :nth-child(#{$i}) {
+        color: white;
+        font-size: 40px;
+        margin: 5px;
+        font-weight: 800;
+      }
+    }
+    :nth-child(5) {
+      color: #fff000;
+      max-width: 400px;
+      text-align: justify;
+    }
+    button {
+      padding: 15px 25px;
+      background-image: linear-gradient(
+        to right,
+        #ff5652,
+        #ff974f,
+        #ff5752,
+        #ffc323
+      );
+      box-shadow: 0 10px 15px 0 rgb(175 0 87/20%);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 1349px) {
+  .hero-section-sub > :nth-child(2) {
+    flex-shrink: 0;
+    // width: 40%;
+  }
+  .hero-section-sub > :nth-child(1) {
+    :first-child {
+      font-size: 40px;
+    }
+    @for $i from 2 through 4 {
+      :nth-child(#{$i}) {
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .hero-section { 
+    height: fit-content;
+  }
+  .hero-section-sub {
+    gap: 30px;
+    flex-direction: column;
+    height: fit-content;
+    padding: 75px;
+    &>:nth-child(2){
+      width: 80% !important;
+      img {
+        width: 100%;
+      }
+    }
+
+  }
+}
