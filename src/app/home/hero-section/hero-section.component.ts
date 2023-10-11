@@ -34,7 +34,7 @@ import { Component } from "@angular/core";
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
             pretium turpis.
           </p>
-          <button>Essayez maintenant</button>
+          <button routerLink="/contact">Essayez maintenant</button>
         </div>
         <!-- <Reveal> -->
         <img src="../../../assets/images/mobile_hero_banner.png" alt="hero" />

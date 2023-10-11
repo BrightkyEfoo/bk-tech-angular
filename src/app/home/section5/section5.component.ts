@@ -40,7 +40,7 @@ import { Component } from "@angular/core";
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               aliquet ligula nec leo elementum semper.
             </p>
-            <button class="outlined-button">
+            <button class="outlined-button" routerLink="/contact">
               Request A Quote
               <!-- <MdOutlineArrowForwardIos color="white" /> -->
             </button>

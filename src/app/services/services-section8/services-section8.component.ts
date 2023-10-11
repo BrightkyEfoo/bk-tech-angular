@@ -18,7 +18,7 @@ import { Component } from "@angular/core";
             <p class="simple-about-p">{{ el.subTitle }}</p>
           </div>
         </div>
-        <button class="button-type-2">View More Projects</button>
+        <button class="button-type-2 outlined-button">View More Projects</button>
       </div>
     </div>
   `,

@@ -39,6 +39,7 @@ import { ServicesSection10Component } from "./services/services-section10/servic
 import { ContactComponent } from "./pages/contact/contact.component";
 import { ContactSection1Component } from "./contact/contact-section1/contact-section1.component";
 import { FormsModule } from "@angular/forms";
+import { MatIconModule } from "@angular/material/icon";
 
 register();
 
@@ -89,6 +90,7 @@ export interface SwiperCard1 {
   imports: [
     BrowserModule,
     FormsModule,
+    MatIconModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],

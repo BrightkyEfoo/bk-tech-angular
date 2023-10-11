@@ -26,7 +26,7 @@ import { Component } from "@angular/core";
             industry. Simply dummy text of the printing and typesetting
             industry.
           </p>
-          <button class="outlined-button">Request A Quote</button>
+          <button class="outlined-button" routerLink="/contact">Request A Quote</button>
         </div>
         <div>
           <div *ngFor="let el of cards" class="{{ el.colorClass + ' card-2' }}">

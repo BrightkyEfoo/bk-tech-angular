@@ -1,17 +1,16 @@
 <div class="{{ 'navbar-container ' + (colorChange ? 'onScroll' : '') }}">
-  <p (click)="(goHome)" class="link">
+  <p routerLink="/" class="link">
     <span>BK</span>
     <span>-</span>
     <span>TECH</span>
   </p>
   <ul>
-
     <li
-      
       class="{{
         (isActualRoute(el) ? 'link actualRoute' : 'link') +
           ' ' +
-          (colorChange ? 'onLinkScroll' : '') + (isMobile ? ' hidden ' : '')
+          (colorChange ? 'onLinkScroll' : '') +
+          (isMobile ? ' hidden ' : '')
       }}"
       *ngFor="let el of links"
       routerLink="{{ el.link ? el.link : '/' + el.text }}"
@@ -20,12 +19,14 @@
     </li>
 
     <li>
-      <button class="theme-toggle-button">
-        <div></div>
+      <button class="theme-toggle-button disabled">
+        <div>
+          <mat-icon>wb_sunny</mat-icon>
+        </div>
       </button>
     </li>
     <li>
-      <button class="quote-button">
+      <button class="quote-button" routerLink="/contact">
         {{ isMobile ? "phone" : "Demander un devis" }}
         <span class="circle"></span>
       </button>

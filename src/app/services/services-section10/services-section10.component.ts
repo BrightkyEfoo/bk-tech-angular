@@ -7,7 +7,7 @@ import { Component } from "@angular/core";
       <div class="services-section-10-container-sub">
         <span class="title-red">LET'S WORK TOGETHER</span>
         <h2 class="title-blue">We Love to Listen to Your Requirements</h2>
-        <button class="button-type-2">Estimate Project</button>
+        <button class="button-type-2 outlined-button" routerLink="/contact">Estimate Project</button>
         <p class="simple-about-p">
           Or call us now
           <!--<FaPhoneAlt size="{25}" />-->
