@@ -1,27 +1,22 @@
 import {
   Component,
   OnInit,
-  AfterViewInit,
-  ElementRef,
-  ViewChild,
+  OnDestroy,
 } from "@angular/core";
-import { SwiperContainer } from "swiper/element";
-import { SwiperOptions } from "swiper/types";
-import { Autoplay } from "swiper/modules";
 
 @Component({
   selector: "home-section1",
   template: `
     <div class="section1-container">
       <div class="section1-container-sub">
-        <swiper-container appSwiper1 #swiper [config]="swiperConfig">
-          <swiper-slide *ngFor="let el of cards">
+        <div class="custom-swiper" id="custom-swiper">
+          <div *ngFor="let el of cards">
             <div class="{{ el.colorClass + ' card-1' }}">
               <img src="{{ el.image }}" />
               <p>{{ el.text }}</p>
             </div>
-          </swiper-slide>
-        </swiper-container>
+          </div>
+        </div>
       </div>
     </div>
   `,
@@ -31,12 +26,15 @@ import { Autoplay } from "swiper/modules";
         margin: 0 30px;
         width: fit-content !important;
       }
+
+      
     `,
   ],
-  styleUrls: ["../section-style.scss", "../cards-style.scss"],
+  styleUrls: ["../section-style.scss", "../cards-style.scss" , "./style.scss"],
 })
-export class Section1Component implements AfterViewInit {
-  @ViewChild("swiper") swiper!: ElementRef<SwiperContainer>;
+export class Section1Component implements OnInit , OnDestroy{
+  
+  // @ViewChild("swiper") swiper!: ElementRef<SwiperContainer>;
   cards = [
     {
       text: "Marketing Solution",
@@ -70,24 +68,29 @@ export class Section1Component implements AfterViewInit {
     },
   ];
 
-  index = 0;
+  myInter: NodeJS.Timeout | undefined;
+  selected = 0;
 
-  // Swiper
-  swiperConfig: SwiperOptions = {
-    modules: [Autoplay],
-    spaceBetween: 50,
-    slidesPerView: 3,
-    loop: true,
-    autoplay: {
-      reverseDirection: true,
-    },
-  };
-
-  ngAfterViewInit() {
-    this.swiper.nativeElement.swiper.activeIndex = this.index;
+  ngOnDestroy(): void {
+    clearInterval(this.myInter)
   }
-
-  slideChange(swiper: any) {
-    this.index = swiper.detail[0].activeIndex;
+  ngOnInit(): void {
+    this.myInter = setInterval(() => {
+      const ell = document.getElementById(
+        "custom-swiper"
+      );
+      if (this.selected === this.cards.length - 3) {
+        this.selected = 0;
+      } else {
+        this.selected = this.selected + 1;
+      }
+      ell?.scrollTo({
+        top: 0,
+        left: this.selected * ell.clientWidth / 3,
+        behavior: "smooth",
+      });
+      // console.log("selected", selected);
+    }, 2000);
   }
+  
 }

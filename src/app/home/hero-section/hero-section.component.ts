@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-
+import { Component, OnInit } from "@angular/core";
+import Typed from "typed.js";
 @Component({
   selector: "app-hero-section",
   template: `
@@ -25,7 +25,7 @@ import { Component } from "@angular/core";
               // style={{ fontSize: "1.6em", display: "inline-block" }}
               repeat={Infinity}
             /> -->
-            <span>We love Web.</span>
+            <span class="animated"></span>
           </p>
           <p class="big-white">Precision.</p>
           <p class="big-white">Rapidite.</p>
@@ -44,4 +44,18 @@ import { Component } from "@angular/core";
   `,
   styleUrls: ["./style.scss"],
 })
-export class HeroSectionComponent {}
+export class HeroSectionComponent implements OnInit {
+  ngOnInit(): void {
+    const type = new Typed(".animated", {
+      strings: [
+        "We Love Web.",
+        "We Love Mobile.",
+        "We Love Graphics.",
+        "We Love Marketing.",
+      ],
+      typeSpeed: 75,
+      backSpeed: 60,
+      loop: true,
+    });
+  }
+}

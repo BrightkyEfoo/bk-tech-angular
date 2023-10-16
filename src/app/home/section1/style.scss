@@ -1,0 +1,10 @@
+.custom-swiper {
+    display: flex;
+    gap : 50px;
+    // justify-content: space-evenly;
+    padding-left: 25px;
+    overflow: hidden;
+    *{
+        user-select: none;
+    }
+}

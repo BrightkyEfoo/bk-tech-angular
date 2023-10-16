@@ -1,8 +1,13 @@
 .contact-section-1-container-sub {
-  h2 {
+  & > div:first-child{
+    font-size: 48px;
+    font-weight: 800;
+  }
+  .animated2 {
     font-size: 48px;
     margin: 0;
   }
+  
   max-width: 1200px;
   margin: 35px auto;
   form {

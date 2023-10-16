@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Event } from "@angular/router";
+import Typed from "typed.js";
 
 @Component({
   selector: "contact-section1",
@@ -25,8 +26,9 @@ import { Event } from "@angular/router";
           speed={50}
           repeat={Infinity}
         /> -->
-        <h2>Bonjour</h2>
-
+        <div>
+          <span class="animated2">Bonjour</span>
+        </div>
         <p class="simple-about-p">
           Please fill out the form below if you have a plan or project in mind
           that you'd like to share with us.
@@ -480,6 +482,13 @@ import { Event } from "@angular/router";
       .color-white {
         color: white;
       }
+      .animated2 {
+        width: fit-content;
+        display: inline;
+      }
+      /* .typed-cursor {
+        font-size : 48px!important
+      } */
     `,
   ],
 })
@@ -601,6 +610,19 @@ export class ContactSection1Component implements OnInit, OnDestroy {
         behavior: "smooth",
       });
     }, 2000);
+    const type = new Typed(".animated2", {
+      strings: [
+        "Bonjour  ",
+        "Hello  ",
+        "Konnichiwa  ",
+        "Hola  ",
+        "Guten tag  ",
+        "Ola  ",
+      ],
+      typeSpeed: 55,
+      backSpeed: 40,
+      loop: true,
+    });
   }
 
   ValidateEmail(input: string) {
