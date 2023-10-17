@@ -16,6 +16,18 @@ import { Component } from "@angular/core";
     </div>
   `,
   styleUrls: ["../sections-style.scss", "../cards-style.scss"],
+  styles: [
+    `
+      .title-blue {
+        font-size: 34px;
+        line-height: 46px;
+        color: #050748;
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
+      }
+    `,
+  ],
 })
 export class ServicesSection1Component {
   cards: { image: string; stat: string; desc: string }[] = [

@@ -362,7 +362,7 @@
       "text1": "Nom et prénom",
       "error1": "svp. entrez votre nom",
       "text2": "Numéro de portable",
-      "error2": "Veuillez saisir un numéro de mobile valide",
+      "error2": "numéro de mobile invalide",
       "text3": "Adresse e-mail",
       "error3": "svp. mettez une adresse email valide",
       "text4": "Intéressé par",

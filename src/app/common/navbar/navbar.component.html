@@ -34,11 +34,14 @@
     </li>
     <li>
       <button class="quote-button" routerLink="/contact">
-        {{ isMobile ? "phone" : ("common.button" | transloco) }}
+        <mat-icon *ngIf="isMobile">phone</mat-icon>
+        {{ isMobile ? "" : ("common.button" | transloco) }}
         <span class="circle"></span>
       </button>
     </li>
-    <li *ngIf="isMobile" (click)="handleToggleMenu()">Menu</li>
+    <li *ngIf="isMobile" (click)="handleToggleMenu()">
+      <mat-icon> menu </mat-icon>
+    </li>
   </ul>
 
   <div
