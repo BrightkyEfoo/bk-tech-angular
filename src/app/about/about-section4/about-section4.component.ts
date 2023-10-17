@@ -7,8 +7,8 @@ import { Router } from "@angular/router";
   template: `
     <div class="about-section-4-container">
       <div class="about-section-4-container-sub">
-        <span class="title-red">OUR PHILOSOPHY</span>
-        <h2 class="title-blue">Our Business Philosophy</h2>
+        <span class="title-red">{{ "about.section4.title" | transloco }}</span>
+        <h2 class="title-blue">{{ "about.section4.subTitle" | transloco }}</h2>
 
         <div
           *ngFor="let el of cards"
@@ -24,9 +24,9 @@ import { Router } from "@angular/router";
         >
           <img src="{{ el.image }}" alt="" />
           <div>
-            <span class="title-red">{{ el.subTitle }}</span>
-            <h2 class="title-blue">{{ el.title }}</h2>
-            <p class="simple-about-p">{{ el.body }}</p>
+            <span class="title-red">{{ el.subTitle | transloco }}</span>
+            <h2 class="title-blue">{{ el.title | transloco }}</h2>
+            <p class="simple-about-p">{{ el.body | transloco }}</p>
           </div>
         </div>
       </div>
@@ -43,37 +43,25 @@ export class AboutSection4Component implements OnInit {
     orientation: "left" | "right";
   }[] = [
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text
-      ever since the 1500s, when an unknown printer took a galley of
-      type and scrambled it to make a type specimen book. Lorem Ipsum is
-      simply dummy text of the printing and typesetting industry.`,
+      body: `about.section4.cards0desc`,
       image: "../../../assets/images/leadership.jpg",
       orientation: "left",
-      subTitle: "SUPERVISION",
-      title: "Leadership",
+      subTitle: "about.section4.cards0title",
+      title: "about.section4.cards0subTitle",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text
-      ever since the 1500s, when an unknown printer took a galley of
-      type and scrambled it to make a type specimen book. Lorem Ipsum is
-      simply dummy text of the printing and typesetting industry.`,
+      body: `about.section4.cards1desc`,
       image: "../../../assets/images/collaboration.jpg",
       orientation: "right",
-      subTitle: "STRENGTH",
-      title: "Team Collaboration",
+      subTitle: "about.section4.cards1title",
+      title: "about.section4.cards1subTitle",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text
-      ever since the 1500s, when an unknown printer took a galley of
-      type and scrambled it to make a type specimen book. Lorem Ipsum is
-      simply dummy text of the printing and typesetting industry.`,
+      body: `about.section4.cards2desc`,
       image: "../../../assets/images/transparency.jpg",
       orientation: "left",
-      subTitle: "QUALITY",
-      title: "Transparency & Integrity",
+      subTitle: "about.section4.cards2title",
+      title: "about.section4.cards2subTitle",
     },
   ];
   constructor(private router: Router, private responsive: BreakpointObserver) {}

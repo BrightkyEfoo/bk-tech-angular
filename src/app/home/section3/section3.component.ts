@@ -5,15 +5,18 @@ import { Component } from "@angular/core";
   template: `
     <div class="section3-container">
       <div class="section3-container-sub">
-        <h3>UR WORK</h3>
-        <p>Our Latest Creative Work</p>
+        <h3>{{ "home.section3.title" | transloco }}</h3>
+        <p>{{ "home.section3.text1" | transloco }}</p>
         <div>
-          <div class="{{ 'card-3 card-3-' + el.type }}" *ngFor="let el of cards">
+          <div
+            class="{{ 'card-3 card-3-' + el.type }}"
+            *ngFor="let el of cards"
+          >
             <div>
               <img src="{{ el.image }}" alt="card-3" />
             </div>
-            <p>{{ el.text1 }}</p>
-            <span>{{ el.text2 }}</span>
+            <p>{{ "home.section3.cards" + el.text1 | transloco }}</p>
+            <span>{{ "home.section3.cards" + el.text2 | transloco }}</span>
           </div>
         </div>
       </div>
@@ -25,26 +28,26 @@ export class Section3Component {
   cards = [
     {
       image: "../../../assets/images/image-d.jpg",
-      text1: "Ecommerce Development",
-      text2: "Web Application",
+      text1: "0title",
+      text2: "0desc",
       type: "large",
     },
     {
       image: "../../../assets/images/image-1.jpg",
-      text1: "Creative App",
-      text2: "iOS, Android",
+      text1: "1title",
+      text2: "1desc",
       type: "small",
     },
     {
       image: "../../../assets/images/image-6.jpg",
-      text1: "Brochure Design",
-      text2: "Graphic, Print",
+      text1: "2title",
+      text2: "1desc",
       type: "small",
     },
     {
       image: "../../../assets/images/image-c.jpg",
-      text1: "Icon Pack",
-      text2: "iOS, Android",
+      text1: "3title",
+      text2: "3desc",
       type: "large",
     },
   ];

@@ -7,8 +7,8 @@ import { Component } from "@angular/core";
 })
 export class ContactComponent {
   props = {
-    pageTitle: "Contact us",
+    pageTitle: "contact.title",
     image: "../../../assets/images/4.jpg",
-    title: "Contact BK-TECH",
+    title: "contact.subTitle",
   };
 }

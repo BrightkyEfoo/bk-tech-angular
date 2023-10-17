@@ -4,18 +4,17 @@ import { Component } from "@angular/core";
   selector: "services-section4",
   template: `<div class="services-section-4-container">
     <div class="services-section-4-container-sub">
-      <span class="title-red">SERVICE</span>
-      <h2 class="title-blue">Our Services</h2>
+      <span class="title-red">{{"services.section4.title" | transloco}}</span>
+      <h2 class="title-blue">{{"services.section4.subTitle" | transloco}}</h2>
       <p class="simple-about-p">
-        We think big and have hands in all leading technology platforms to
-        provide you wide array of services.
+      {{"services.section4.desc" | transloco}}
       </p>
       <div>
         <div class="services-card-1" *ngFor="let el of cards">
           <img src="{{ el.image }}" alt="" />
           <div>
-            <h3 class="title-blue">{{ el.title }}</h3>
-            <p class="simple-about-p">{{ el.desc }}</p>
+            <h3 class="title-blue">{{ el.title | transloco }}</h3>
+            <p class="simple-about-p">{{ el.desc | transloco }}</p>
           </div>
         </div>
       </div>
@@ -35,50 +34,50 @@ export class ServicesSection4Component {
     desc: string;
   }[] = [
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards0desc`,
       image: "../../../assets/images/mob-service-item2.png",
-      title: "iOS App Development",
+      title: "services.section4.cards0title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards1desc`,
       image: "../../../assets/images/mob-service-item1.png",
-      title: "Android App Development",
+      title: "services.section4.cards1title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards2desc`,
       image: "../../../assets/images/seo.png",
-      title: "Search Engine Optimization",
+      title: "services.section4.cards2title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards3desc`,
       image: "../../../assets/images/smo.png",
-      title: "Social Media Marketing",
+      title: "services.section4.cards3title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards4desc`,
       image: "../../../assets/images/logo-design.jpg",
-      title: "Logo Designing",
+      title: "services.section4.cards4title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards5desc`,
       image: "../../../assets/images/visit-card.jpg",
-      title: "Business Card Designs",
+      title: "services.section4.cards5title",
     },
 
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards6desc`,
       image: "../../../assets/images/brochure-.jpg",
-      title: "Brochure Design",
+      title: "services.section4.cards6title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards7desc`,
       image: "../../../assets/images/ppc.png",
-      title: "Pay per Click",
+      title: "services.section4.cards7title",
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.`,
+      desc: `services.section4.cards8desc`,
       image: "../../../assets/images/mob-service-item3.png",
-      title: "Cross Platform App Development",
+      title: "services.section4.cards8title",
     },
   ];
 }

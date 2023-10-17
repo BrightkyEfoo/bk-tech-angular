@@ -7,37 +7,17 @@ import Typed from "typed.js";
   template: `
     <div class="contact-section-1-container">
       <div class="contact-section-1-container-sub">
-        <!-- <TypeAnimation
-          sequence={[
-            "Bonjour  ",
-            1300,
-            "Hello  ",
-            1000,
-            "Konnichiwa  ",
-            1600,
-            "Hola  ",
-            1500,
-            "Guten tag  ",
-            1000,
-            "Ola  ",
-            900,
-          ]}
-          wrapper="h2"
-          speed={50}
-          repeat={Infinity}
-        /> -->
         <div>
           <span class="animated2">Bonjour</span>
         </div>
         <p class="simple-about-p">
-          Please fill out the form below if you have a plan or project in mind
-          that you'd like to share with us.
+          {{ "contact.text1" | transloco }}
         </p>
         <div class="sub-section-container">
           <div class="form-container">
-            <h2 class="title-blue">Get In Touch</h2>
+            <h2 class="title-blue">{{ "contact.text2" | transloco }}</h2>
             <p class="simple-about-p">
-              We will catch you as early as we receive the message
+              {{ "contact.text3" | transloco }}
             </p>
             <form #contactForm="ngForm">
               <div
@@ -78,14 +58,16 @@ import Typed from "typed.js";
                         : 'placeholder'
                     }}"
                   >
-                    Full Name
+                    {{ "contact.form.text1" | transloco }}
                   </span>
                 </div>
                 <div
                   *ngIf="!fullname.pristine && !fullname.valid"
                   class="error-message-container"
                 >
-                  <span class="error-message">Please enter your name</span>
+                  <span class="error-message">{{
+                    "contact.form.error1" | transloco
+                  }}</span>
                 </div>
               </div>
 
@@ -103,7 +85,7 @@ import Typed from "typed.js";
                   type="tel"
                   id="phone"
                   required
-                  pattern="^(?(+?d{2,4}))?[- ]?(d{2,4})[- ]?(d{1,5})$"
+                  pattern=""
                   [(ngModel)]="form.phone"
                   #phone="ngModel"
                 />
@@ -125,16 +107,16 @@ import Typed from "typed.js";
                       form.phone ? 'placeholder placeholder-top' : 'placeholder'
                     }}"
                   >
-                    Mobile Number
+                    {{ "contact.form.text2" | transloco }}
                   </span>
                 </div>
                 <div
                   *ngIf="!phone.valid && !phone.pristine"
                   class="error-message-container"
                 >
-                  <span class="error-message"
-                    >Please enter a valid mobile number</span
-                  >
+                  <span class="error-message">{{
+                    "contact.form.error2" | transloco
+                  }}</span>
                 </div>
               </div>
 
@@ -152,7 +134,7 @@ import Typed from "typed.js";
                   type="email"
                   id="email"
                   required
-                  pattern='^(([^<>()[]\\.,;:s@"]+(.[^<>()[]\\.,;:s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$'
+                  pattern="^[a-zA-Z][a-zA-Z0-9\\.\\-_]+@[a-zA-Z][a-zA-Z0-9\\.\\-_]+\\.[a-zA-Z][a-zA-Z0-9\\.\\-_]{2,5}$"
                   [(ngModel)]="form.email"
                   #email="ngModel"
                 />
@@ -174,16 +156,16 @@ import Typed from "typed.js";
                       form.email ? 'placeholder placeholder-top' : 'placeholder'
                     }}"
                   >
-                    Email Address
+                    {{ "contact.form.text3" | transloco }}
                   </span>
                 </div>
                 <div
                   *ngIf="!email.valid && !email.pristine"
                   class="error-message-container"
                 >
-                  <span class="error-message"
-                    >Please enter a valid email address</span
-                  >
+                  <span class="error-message">{{
+                    "contact.form.error3" | transloco
+                  }}</span>
                 </div>
               </div>
 
@@ -207,10 +189,10 @@ import Typed from "typed.js";
                   #interest="ngModel"
                 >
                   <option></option>
-                  <option>Graphic Design</option>
-                  <option>Web Design</option>
-                  <option>App Design</option>
-                  <option>Other</option>
+                  <option>{{ "contact.form.option1" | transloco }}</option>
+                  <option>{{ "contact.form.option2" | transloco }}</option>
+                  <option>{{ "contact.form.option3" | transloco }}</option>
+                  <option>{{ "contact.form.option4" | transloco }}</option>
                 </select>
                 <mat-icon
                   *ngIf="!interest.pristine && interest.valid"
@@ -232,14 +214,16 @@ import Typed from "typed.js";
                         : 'placeholder'
                     }}"
                   >
-                    Interested In
+                    {{ "contact.form.text4" | transloco }}
                   </span>
                 </div>
                 <div
                   *ngIf="!interest.valid && !interest.pristine"
                   class="error-message-container"
                 >
-                  <span class="error-message">Please select your interest</span>
+                  <span class="error-message">{{
+                    "contact.form.error4" | transloco
+                  }}</span>
                 </div>
               </div>
 
@@ -285,14 +269,16 @@ import Typed from "typed.js";
                         : 'placeholder'
                     }}"
                   >
-                    Your Location
+                    {{ "contact.form.text5" | transloco }}
                   </span>
                 </div>
                 <div
                   *ngIf="!location.valid && !location.pristine"
                   class="error-message-container"
                 >
-                  <span class="error-message">Please enter your location</span>
+                  <span class="error-message">{{
+                    "contact.form.error5" | transloco
+                  }}</span>
                 </div>
               </div>
 
@@ -347,14 +333,16 @@ import Typed from "typed.js";
                         : 'placeholder'
                     }}"
                   >
-                    Whatsapp No
+                    {{ "contact.form.text6" | transloco }}
                   </span>
                 </div>
                 <div
                   *ngIf="!whatsapp.valid && !whatsapp.pristine"
                   class="error-message-container"
                 >
-                  <span class="error-message">Please provide Whatsapp No.</span>
+                  <span class="error-message">{{
+                    "contact.form.error6" | transloco
+                  }}</span>
                 </div>
               </div>
 
@@ -394,7 +382,7 @@ import Typed from "typed.js";
                       form.brief ? 'placeholder placeholder-top' : 'placeholder'
                     }}"
                   >
-                    Brief about the project
+                    {{ "contact.form.text7" | transloco }}
                   </span>
                 </div>
                 <div
@@ -402,7 +390,7 @@ import Typed from "typed.js";
                   class="error-message-container"
                 >
                   <span class="error-message"
-                    >Please enter brief of the project (Max 10000 characters)
+                    >{{ "contact.form.error7" | transloco }}
                   </span>
                 </div>
               </div>
@@ -411,19 +399,21 @@ import Typed from "typed.js";
             <div>
               <input type="checkbox" />
               <label>
-                By clicking the “Submit” button you agree to our
-                <span rooterLink="/terms-conditions">Terms & Conditions.</span>
+                {{ "contact.form.text8" | transloco }}
+                <span rooterLink="/terms-conditions">{{
+                  "contact.form.text9" | transloco
+                }}</span>
               </label>
               <button type="button">
-                Submit
+                {{ "contact.form.button" | transloco }}
                 <mat-icon class="color-white">keyboard_arrow_right</mat-icon>
               </button>
             </div>
           </div>
           <div class="right-side-container">
-            <h2 class="title-blue">Trusted by</h2>
+            <h2 class="title-blue">{{ "contact.text4" | transloco }}</h2>
             <span class="simple-about-p">
-              Clients belive us and we deliverd them good service
+              {{ "contact.text5" | transloco }}
             </span>
             <div>
               <img *ngFor="let el of clients" src="{{ el.image }}" alt="" />
@@ -437,7 +427,7 @@ import Typed from "typed.js";
                 *ngFor="let slide of data"
                 class="customer-details-container-contact-section-1"
               >
-                <p class="simple-about-p">{{ slide.text }}</p>
+                <p class="simple-about-p">{{ slide.text | transloco }}</p>
                 <div>
                   <img src="{{ slide.photo }}" alt="" />
                   <div>
@@ -493,6 +483,7 @@ import Typed from "typed.js";
   ],
 })
 export class ContactSection1Component implements OnInit, OnDestroy {
+  // emailRegExp =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm
   form = {
     fullname: "",
     phone: "",
@@ -566,19 +557,19 @@ export class ContactSection1Component implements OnInit, OnDestroy {
 
   data = [
     {
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      text: `contact.cards0desc`,
       photo: "../../../assets/images/client-pic-x.jpg",
       name: "bikos maximus",
       poste: "CEO",
     },
     {
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      text: `contact.cards1desc`,
       photo: "../../../assets/images/client-pic-x.jpg",
       name: "bikos maximus",
       poste: "CEO",
     },
     {
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      text: `contact.cards2desc`,
       photo: "../../../assets/images/client-pic-x.jpg",
       name: "bikos maximus",
       poste: "CEO",
@@ -657,3 +648,6 @@ export class ContactSection1Component implements OnInit, OnDestroy {
     return value.length > 5;
   }
 }
+
+
+// ^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$

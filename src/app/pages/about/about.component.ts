@@ -7,8 +7,8 @@ import { Component } from "@angular/core";
 })
 export class AboutComponent {
   commonHeroProps = {
-    pageTitle: "About us",
+    pageTitle: "about.title",
     image: "../../../assets/images/9.jpg",
-    title: "About BK-TECH",
+    title: "about.subTitle",
   };
 }

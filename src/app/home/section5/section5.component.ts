@@ -7,22 +7,18 @@ import { Component } from "@angular/core";
       <div class="section5-container">
         <div class="section5-container-sub">
           <div class="section5-container-sub-right">
-            <h3 class="first-title">SERVICES</h3>
+            <h3 class="first-title">{{ "home.section5.title" | transloco }}</h3>
             <p class="second-title">
-              Pourquoi <span>BK-TECH</span> est parmis les meilleurs ?
+              {{ "home.section5.text1" | transloco }}
             </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
+            <p>{{ "home.section5.text2" | transloco }}</p>
             <div class="card-5" *ngFor="let el of cards">
               <div>
                 <img src="{{ el.image }}" />
               </div>
               <div>
-                <p>{{ el.title }}</p>
-                <p>{{ el.text }}</p>
+                <p>{{ "home.section5.cards" + el.title | transloco }}</p>
+                <p>{{ "home.section5.cards" + el.text | transloco }}</p>
               </div>
             </div>
           </div>
@@ -31,17 +27,14 @@ import { Component } from "@angular/core";
               <img src="../../../assets/images/about-company.jpg" />
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
+              {{ "home.section5.text3" | transloco }}
             </p>
-            <p>Let's Start a <span>New Project</span> Together</p>
+            <p>{{ "home.section5.text4" | transloco }}</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              aliquet ligula nec leo elementum semper.
+              {{ "home.section5.text5" | transloco }}
             </p>
             <button class="outlined-button" routerLink="/contact">
-              Request A Quote
+              {{ "home.section5.button" | transloco }}
               <!-- <MdOutlineArrowForwardIos color="white" /> -->
             </button>
           </div>
@@ -55,18 +48,18 @@ export class Section5Component {
   cards = [
     {
       image: "../../../assets/images/computers2.svg",
-      title: "Streamlined Project Management",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper. Mauris aliquet egestas metus.",
+      title: "0title",
+      text: "0desc",
     },
     {
       image: "../../../assets/images/deal2.svg",
-      title: "Streamlined Project Management",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper. Mauris aliquet egestas metus.",
+      title: "1title",
+      text: "1desc",
     },
     {
       image: "../../../assets/images/worker.svg",
-      title: "Streamlined Project Management",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper. Mauris aliquet egestas metus.",
+      title: "2title",
+      text: "2desc",
     },
   ];
 }

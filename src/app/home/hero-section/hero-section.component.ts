@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { TranslocoService } from "@ngneat/transloco";
+import { AfterContentInit, AfterRenderRef, AfterViewInit, Component, OnInit } from "@angular/core";
 import Typed from "typed.js";
 @Component({
   selector: "app-hero-section",
@@ -27,14 +28,13 @@ import Typed from "typed.js";
             /> -->
             <span class="animated"></span>
           </p>
-          <p class="big-white">Precision.</p>
-          <p class="big-white">Rapidite.</p>
-          <p class="big-white">Robustesse.</p>
+          <p class="big-white">{{ "home.heroSection.text1" | transloco}}.</p>
+          <p class="big-white">{{ "home.heroSection.text2" | transloco}}.</p>
+          <p class="big-white">{{ "home.heroSection.text3" | transloco}}.</p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed
-            pretium turpis.
+            {{ "home.heroSection.text4" | transloco}}
           </p>
-          <button routerLink="/contact">Essayez maintenant</button>
+          <button routerLink="/contact">{{ "home.heroSection.button" | transloco}}</button>
         </div>
         <!-- <Reveal> -->
         <img src="../../../assets/images/mobile_hero_banner.png" alt="hero" />
@@ -44,7 +44,9 @@ import Typed from "typed.js";
   `,
   styleUrls: ["./style.scss"],
 })
-export class HeroSectionComponent implements OnInit {
+export class HeroSectionComponent implements OnInit{
+  constructor(private translocoService: TranslocoService) {}
+
   ngOnInit(): void {
     const type = new Typed(".animated", {
       strings: [

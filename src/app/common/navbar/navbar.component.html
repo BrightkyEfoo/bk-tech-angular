@@ -15,7 +15,7 @@
       *ngFor="let el of links"
       routerLink="{{ el.link ? el.link : '/' + el.text }}"
     >
-      {{ el.text }}
+      {{ "common." + el.text + "" | transloco }}
     </li>
 
     <li>
@@ -26,8 +26,15 @@
       </button>
     </li>
     <li>
+      <button class="lang-toggle-button" (click)="changeLang()">
+        <div>
+          <span>{{ actualLang }}</span>
+        </div>
+      </button>
+    </li>
+    <li>
       <button class="quote-button" routerLink="/contact">
-        {{ isMobile ? "phone" : "Demander un devis" }}
+        {{ isMobile ? "phone" : ("common.button" | transloco) }}
         <span class="circle"></span>
       </button>
     </li>

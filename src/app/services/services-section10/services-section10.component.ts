@@ -5,11 +5,17 @@ import { Component } from "@angular/core";
   template: `
     <div class="services-section-10-container">
       <div class="services-section-10-container-sub">
-        <span class="title-red">LET'S WORK TOGETHER</span>
-        <h2 class="title-blue">We Love to Listen to Your Requirements</h2>
-        <button class="button-type-2 outlined-button" routerLink="/contact">Estimate Project</button>
+        <span class="title-red">
+          {{ "services.section10.title" | transloco }}
+        </span>
+        <h2 class="title-blue">
+          {{ "services.section10.subTitle" | transloco }}
+        </h2>
+        <button class="button-type-2 outlined-button" routerLink="/contact">
+          {{ "services.section10.button" | transloco }}
+        </button>
         <p class="simple-about-p">
-          Or call us now
+          {{ "services.section10.text1" | transloco }}
           <!--<FaPhoneAlt size="{25}" />-->
           <span> (123) 456 7890</span>
         </p>

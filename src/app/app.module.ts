@@ -40,6 +40,8 @@ import { ContactComponent } from "./pages/contact/contact.component";
 import { ContactSection1Component } from "./contact/contact-section1/contact-section1.component";
 import { FormsModule } from "@angular/forms";
 import { MatIconModule } from "@angular/material/icon";
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 register();
 
@@ -93,6 +95,8 @@ export interface SwiperCard1 {
     MatIconModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    TranslocoRootModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

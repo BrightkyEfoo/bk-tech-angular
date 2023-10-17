@@ -6,29 +6,17 @@ import { Component } from "@angular/core";
     <div class="about-section-3-container">
       <div class="about-section-3-container-sub">
         <div>
-          <h2>
-            A group of creative minds dedicated to creating the best apps and
-            websites in the world.
-          </h2>
+          <h2>{{ "about.section3.title" | transloco }}</h2>
           <div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
+            <p>{{ "about.section3.text1" | transloco }}</p>
+            <p>{{ "about.section3.text2" | transloco }}</p>
           </div>
         </div>
         <div>
           <div *ngFor="let el of cards" class="about-card2">
             <img src="{{ el.image }}" alt="" />
-            <h3>{{ el.title }}</h3>
-            <p>{{ el.body }}</p>
+            <h3>{{ el.title | transloco }}</h3>
+            <p>{{ el.body | transloco }}</p>
           </div>
         </div>
       </div>
@@ -44,13 +32,13 @@ export class AboutSection3Component {
   }[] = [
     {
       image: "../../../assets/images/vision.png",
-      body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      title: "Our Vision",
+      body: "about.section3.cards0desc",
+      title: "about.section3.cards0title",
     },
     {
       image: "../../../assets/images/mountain.png",
-      body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      title: "Our Mission",
+      body: "about.section3.cards1desc",
+      title: "about.section3.cards1title",
     },
   ];
 }

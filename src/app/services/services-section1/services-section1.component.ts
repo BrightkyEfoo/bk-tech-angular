@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
           <img src="{{ el.image }}" alt="" />
           <div>
             <p class="title-blue">{{ el.stat }}</p>
-            <p class="simple-about-p">{{ el.desc }}</p>
+            <p class="simple-about-p">{{ el.desc | transloco }}</p>
           </div>
         </div>
       </div>
@@ -20,22 +20,22 @@ import { Component } from "@angular/core";
 export class ServicesSection1Component {
   cards: { image: string; stat: string; desc: string }[] = [
     {
-      desc: "Happy Clients",
+      desc: "services.section1.text1",
       image: "../../../assets/images/deal.svg",
       stat: "450",
     },
     {
-      desc: "Projects Done",
+      desc: "services.section1.text2",
       image: "../../../assets/images/computers.svg",
       stat: "48k",
     },
     {
-      desc: "Hours Worked",
+      desc: "services.section1.text3",
       image: "../../../assets/images/worker.svg",
       stat: "95k",
     },
     {
-      desc: "Support Available",
+      desc: "services.section1.text4",
       image: "../../../assets/images/customer-service.svg",
       stat: "24/7",
     },

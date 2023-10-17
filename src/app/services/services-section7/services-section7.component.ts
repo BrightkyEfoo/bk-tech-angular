@@ -5,12 +5,9 @@ import { Component } from "@angular/core";
   template: `
     <div class="services-section-7-container">
       <div class="services-section-7-container-sub">
-        <span class="title-red">PRICING</span>
-        <h2 class="title-blue">Pricing Table Overview</h2>
-        <p class="simple-about-p">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+        <span class="title-red">{{"services.section7.title" | transloco}}</span>
+        <h2 class="title-blue">{{"services.section7.subtitle" | transloco}}</h2>
+        <p class="simple-about-p">{{"services.section7.desc" | transloco}}</p>
         <div>
           <div
             *ngFor="let el of cards"
@@ -24,8 +21,8 @@ import { Component } from "@angular/core";
             }}"
           >
             <img src="{{ el.image }}" alt="" />
-            <h4>{{ el.title }}"</h4>
-            <p class="xxdd">{{ el.subTitle }}</p>
+            <h4>{{ el.title | transloco }}</h4>
+            <p>{{ el.subDesc | transloco }}</p>
             <p
               class="{{
                 'price-container ' +
@@ -38,9 +35,9 @@ import { Component } from "@angular/core";
             >
               <span>$</span> {{ el.price.toFixed(2) }}
             </p>
-            <p class="xxdd">{{ el.subTitle }}</p>
+            <p class="xxdd">{{ el.subTitle | transloco }}</p>
             <hr />
-            <p *ngFor="let subEl of el.desc" class="xxdd">{{ subEl }}</p>
+            <p *ngFor="let subEl of el.desc" class="xxdd">{{ subEl | transloco }}</p>
             <div>
               <button
                 class="{{
@@ -52,8 +49,8 @@ import { Component } from "@angular/core";
                       : 'bg-red')
                 }}"
               >
-                Get Started <span class="circle"></span>
-              </button>
+                {{"services.section7.button" | transloco }} <span class="circle"></span>
+              </button> 
             </div>
           </div>
         </div>
@@ -81,50 +78,50 @@ export class ServicesSection7Component {
     {
       color: "red",
       desc: [
-        "Social Media Marketing",
-        "2.100 Keywords",
-        "One Way Link Building",
-        "5 Free Optimization",
-        "3 Press Releases",
+        "services.section7.cards0text4",
+        "services.section7.cards0text5",
+        "services.section7.cards0text6",
+        "services.section7.cards0text7",
+        "services.section7.cards0text8",
       ],
       image: "../../../assets/images/plan-1.svg",
       link: "#",
       price: 79.99,
-      subDesc: "Monthly Package",
-      subTitle: "Great For Small Business",
-      title: "PERSONAL",
+      subDesc: "services.section7.cards0text3",
+      subTitle: "services.section7.cards0text2",
+      title: "services.section7.cards0text1",
     },
     {
       color: "blue",
       desc: [
-        "Social Media Marketing",
-        "2.100 Keywords",
-        "One Way Link Building",
-        "5 Free Optimization",
-        "3 Press Releases",
+        "services.section7.cards1text4",
+        "services.section7.cards1text5",
+        "services.section7.cards1text6",
+        "services.section7.cards1text7",
+        "services.section7.cards1text8",
       ],
-      image: "../../../assets/images/plan-2.svg",
+      image: "../../../assets/images/plan-1.svg",
       link: "#",
       price: 79.99,
-      subDesc: "Monthly Package",
-      subTitle: "Great For Small Business",
-      title: "PERSONAL",
+      subDesc: "services.section7.cards1text3",
+      subTitle: "services.section7.cards1text2",
+      title: "services.section7.cards1text1",
     },
     {
       color: "dark-blue",
       desc: [
-        "Social Media Marketing",
-        "2.100 Keywords",
-        "One Way Link Building",
-        "5 Free Optimization",
-        "3 Press Releases",
+        "services.section7.cards2text4",
+        "services.section7.cards2text5",
+        "services.section7.cards2text6",
+        "services.section7.cards2text7",
+        "services.section7.cards2text8",
       ],
-      image: "../../../assets/images/plan-3.svg",
+      image: "../../../assets/images/plan-1.svg",
       link: "#",
       price: 79.99,
-      subDesc: "Monthly Package",
-      subTitle: "Great For Small Business",
-      title: "PERSONAL",
+      subDesc: "services.section7.cards2text3",
+      subTitle: "services.section7.cards2text2",
+      title: "services.section7.cards2text1",
     },
   ];
 }

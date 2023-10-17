@@ -5,8 +5,8 @@ import { Component, OnInit } from "@angular/core";
   selector: "services-section2",
   template: `<div class="services-section-2-container">
     <div class="services-section-2-container-sub">
-      <span class="title-red">OVERVIEWS</span>
-      <h2 class="title-blue">Mobile, Web & Design</h2>
+      <span class="title-red">{{"services.section2.title" | transloco}}</span>
+      <h2 class="title-blue">{{"services.section2.subTitle" | transloco}}</h2>
       <div>
         <div
           class="about-card-3"
@@ -22,9 +22,9 @@ import { Component, OnInit } from "@angular/core";
         >
           <img src="{{ el.image }}" alt="" />
           <div>
-            <span class="title-red">{{ el.subTitle }}</span>
-            <h2 class="title-blue">{{ el.title }}</h2>
-            <p class="simple-about-p">{{ el.body }}</p>
+            <span class="title-red">{{ el.subTitle | transloco }}</span>
+            <h2 class="title-blue">{{ el.title | transloco }}</h2>
+            <p class="simple-about-p">{{ el.body | transloco }}</p>
           </div>
         </div>
       </div>
@@ -48,39 +48,25 @@ export class ServicesSection2Component implements OnInit {
     orientation: "left" | "right";
   }[] = [
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-       when an unknown printer took a galley of type and scrambled it to make a type 
-       specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting 
-       industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-       is simply dummy text of the printing and typesetting industry.
-  
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      is simply dummy text of the printing and typesetting industry.`,
+      body: `services.section2.cards0desc`,
       image: "../../../assets/images/app-develops.png",
       orientation: "left",
-      subTitle: "OVERVIEW",
-      title: "Custom Mobile App Solutions",
+      subTitle: "services.section2.cards0title",
+      title: "services.section2.cards0subTitle",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-      when an unknown printer took a galley of type and scrambled it to make a type 
-      specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting 
-      industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-      is simply dummy text of the printing and typesetting industry.`,
+      body: `services.section2.cards1desc`,
       image: "../../../assets/images/digitalmarketing.png",
       orientation: "right",
-      subTitle: "OVERVIEW",
-      title: "Digital Marketing Services for Growing Your Company",
+      subTitle: "services.section2.cards1title",
+      title: "services.section2.cards1subTitle",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry.`,
+      body: `services.section2.cards2desc`,
       image: "../../../assets/images/graphic-design.jpg",
       orientation: "left",
-      subTitle: "OVERVIEW",
-      title: "Custom Graphic Design Services We Offer",
+      subTitle: "services.section2.cards2title",
+      title: "services.section2.cards2subTitle",
     },
   ];
   constructor(private responsive: BreakpointObserver) {}

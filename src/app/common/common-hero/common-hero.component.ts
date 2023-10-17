@@ -9,10 +9,10 @@ import { Component, Input } from "@angular/core";
     >
       <div>
         <ul>
-          <span routerLink="/">Home</span>
-          <li>{{ props?.pageTitle }}</li>
+          <span routerLink="/">{{ "common.home" | transloco}}</span>
+          <li>{{ props?.pageTitle | transloco}}</li>
         </ul>
-        <h1>{{ props?.title }}</h1>
+        <h1>{{ props?.title | transloco}}</h1>
       </div>
     </div>
   `,

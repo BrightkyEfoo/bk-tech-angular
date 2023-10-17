@@ -5,27 +5,15 @@ import { Component } from "@angular/core";
   template: `
     <div class="section4-container">
       <div class="section4-container-sub">
-        <h3 class="first-title">SERVICES</h3>
-        <p class="second-title">Our Services</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's specimen book. Lorem
-          Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+        <h3 class="first-title">{{ "home.section4.title" | transloco }}</h3>
+        <p class="second-title">{{ "home.section4.text1" | transloco }}</p>
+        <p>{{ "home.section4.text2" | transloco }}</p>
         <div>
           <div>
-            <p>INTEGRATED SERVICES</p>
-            <p>
-              Lorem Ipsum is text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500.
-            </p>
+            <p>{{ "home.section4.cardTitle" | transloco }}</p>
+            <p>{{ "home.section4.cardText" | transloco }}</p>
             <button>
-              Learn More
-              <!-- <MdOutlineArrowForwardIos color="white" /> -->
+              {{ "home.section4.cardLink" | transloco }}
             </button>
           </div>
           <div
@@ -33,7 +21,7 @@ import { Component } from "@angular/core";
             *ngFor="let el of cards"
           >
             <img src="{{ el.image }}" alt="" />
-            <p>{{ el.title }}</p>
+            <p>{{ ("home.section4.cards"+el.title+"") | transloco}}</p>
             <p>{{ el.subTitle }}</p>
             <p>{{ el.desc }}</p>
           </div>
@@ -54,7 +42,7 @@ export class Section4Component {
   }[] = [
     {
       image: "../../../assets/images/card4/development.svg",
-      title: "Web Development",
+      title: "0",
       subTitle: "PHP | .NET | JAVA | JOOMLA",
       size: "normal",
       desc: `Lorem Ipsum is text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.`,
@@ -62,7 +50,7 @@ export class Section4Component {
     },
     {
       image: "../../../assets/images/card4/ecommerce.svg",
-      title: "Ecommerce Development",
+      title: "1",
       subTitle: "MAGENTO | WP | SHOPIFY | JOOMLA",
       size: "normal",
       desc: `Lorem Ipsum is text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.`,
@@ -70,7 +58,7 @@ export class Section4Component {
     },
     {
       image: "../../../assets/images/card4/app.svg",
-      title: "Mobile App Development",
+      title: "2",
       subTitle: "IPHONE | ANDROID | CROSS PLATFORM",
       size: "normal",
       desc: `Lorem Ipsum is text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.`,
@@ -78,7 +66,7 @@ export class Section4Component {
     },
     {
       image: "../../../assets/images/card4/tech.svg",
-      title: "Trending Technologies",
+      title: "3",
       subTitle: "REACT.JS | NODE.JS | ANGULAR.JS",
       size: "normal",
       desc: `Lorem Ipsum is text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.`,
@@ -86,7 +74,7 @@ export class Section4Component {
     },
     {
       image: "../../../assets/images/card4/seo.svg",
-      title: "Digital Marketing",
+      title: "4",
       subTitle: "SEO | SMO | PPC",
       size: "large",
       desc: `Lorem Ipsum is text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.`,

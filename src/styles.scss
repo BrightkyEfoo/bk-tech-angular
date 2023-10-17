@@ -15,14 +15,43 @@
 }
 
 .outlined-button:hover {
-  border-color: #007aff!important;
-  background-color: #007aff!important;
-  color: white!important;
+  border-color: #007aff !important;
+  background-color: #007aff !important;
+  color: white !important;
 }
 
+.lang-toggle-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2251af;
+  background-color: #2251af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 300ms;
+  &:hover{
+    background-color: white;
+  }
+  padding: 0;
+  span {
+    text-transform: uppercase;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+}
 
-.disabled{
-  cursor : not-allowed
+.disabled {
+  cursor: not-allowed;
 }
 
 .back-3faee5 {
@@ -298,7 +327,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
 
 @font-face {
   font-family: "swiper-icons";

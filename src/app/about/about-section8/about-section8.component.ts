@@ -5,17 +5,17 @@ import { Component } from "@angular/core";
   template: `
     <div class="about-section-8-container">
       <div class="about-section-8-container-sub">
-        <span class="title-red">OUR LOCATIONS</span>
-        <h2 class="title-blue">Our Office</h2>
+        <span class="title-red">{{ "about.section8.title" | transloco }}</span>
+        <h2 class="title-blue">{{ "about.section8.subTitle" | transloco }}</h2>
         <div>
           <div class="about-card-6" *ngFor="let el of cards">
             <div>
               <img src="{{ el.image }}" alt="" />
             </div>
             <div>
-              <h4>{{ el.city }}</h4>
-              <h5>{{ el.officeType }}</h5>
-              <p class="simple-about-p">{{ el.location }}</p>
+              <h4>{{ el.city | transloco }}</h4>
+              <h5>{{ el.officeType | transloco}}</h5>
+              <p class="simple-about-p">{{ el.location | transloco }}</p>
 
               <p class="simple-about-p" *ngIf="el.email">
                 <!-- <FaPhoneAlt />  -->
@@ -43,26 +43,26 @@ export class AboutSection8Component {
     image: string;
   }[] = [
     {
-      city: "Yaounde",
+      city: "about.section8.cards0title",
       image: "../../../assets/images/india-img.png",
-      location: "232, 21st East Street, Deido, Douala, Cameroun 303030",
-      officeType: "Registred Office",
+      location: "about.section8.cards0text2",
+      officeType: "about.section8.cards0text1",
       email: "infos@bk-tech.com",
       phone: "+237612345678",
     },
     {
-      city: "Italy",
+      city: "about.section8.cards1title",
       image: "../../../assets/images/italy.png",
-      location: "232, 21st East Street, Deido, Douala, Cameroun 303030",
-      officeType: "Registred Office",
+      location: "about.section8.cards1text2",
+      officeType: "about.section8.cards1text1",
       email: "infos@bk-tech.com",
       phone: "+237612345678",
     },
     {
-      city: "Paris",
+      city: "about.section8.cards2title",
       image: "../../../assets/images/paris.png",
-      location: "232, 21st East Street, Deido, Douala, Cameroun 303030",
-      officeType: "Registred Office",
+      location: "about.section8.cards2text2",
+      officeType: "about.section8.cards2text1",
       email: "infos@bk-tech.com",
       phone: "+237612345678",
     },

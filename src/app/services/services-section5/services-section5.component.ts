@@ -5,12 +5,9 @@ import { Component } from "@angular/core";
   template: `
     <div class="services-section-5-container">
       <div class="services-section-5-container-sub">
-        <span class="title-red">PROCESS</span>
-        <h2 class="title-blue">Our App Development Process</h2>
-        <p class="simple-about-p">
-          Our design process follows a proven approach. We begin with a deep
-          understanding of your needs and create a planning template.
-        </p>
+        <span class="title-red">{{"services.section5.title" | transloco}}</span>
+        <h2 class="title-blue">{{"services.section5.subTitle" | transloco}}</h2>
+        <p class="simple-about-p">{{"services.section5.desc" | transloco}}</p>
         <div>
           <div
             *ngFor="let el of cards"
@@ -21,8 +18,8 @@ import { Component } from "@angular/core";
             <img src="{{ el.image }}" alt="" />
             <div>
               <span>{{ cards.indexOf(el) + 1 }}</span>
-              <h4 class="title-blue">{{ el.title }}</h4>
-              <p class="simple-about-p">{{ el.desc }}</p>
+              <h4 class="title-blue">{{ el.title | transloco}}</h4>
+              <p class="simple-about-p">{{ el.desc  | transloco }}</p>
             </div>
           </div>
         </div>
@@ -44,25 +41,25 @@ export class ServicesSection5Component {
     inverse?: boolean;
   }[] = [
     {
-      desc: `Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.`,
+      desc: `services.section5.cards0desc`,
       image: "../../../assets/images/process-1.jpg",
-      title: "Requirement Gathering",
+      title: "services.section5.cards0title",
     },
     {
-      desc: `Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.`,
+      desc: `services.section5.cards1desc`,
       image: "../../../assets/images/process-2.jpg",
-      title: "Requirement Gathering",
+      title: "services.section5.cards1title",
       inverse: true,
     },
     {
-      desc: `Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.`,
+      desc: `services.section5.cards2desc`,
       image: "../../../assets/images/process-3.jpg",
-      title: "Requirement Gathering",
+      title: "services.section5.cards2title",
     },
     {
-      desc: `Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.`,
+      desc: `services.section5.cards3desc`,
       image: "../../../assets/images/process-4.jpg",
-      title: "Requirement Gathering",
+      title: "services.section5.cards3title",
       inverse: true,
     },
   ];

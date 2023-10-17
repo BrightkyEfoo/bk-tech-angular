@@ -28,8 +28,7 @@ import { Component } from "@angular/core";
               <span>BK</span>-<span>TECH</span>
             </h5>
             <p>
-              News letter dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Enter your email
+              {{ "footer.text1" | transloco }}
             </p>
             <p>
               <button class="social-buttons">
@@ -95,7 +94,7 @@ import { Component } from "@angular/core";
             </p>
           </div>
           <div>
-            <h5>Contact Us</h5>
+            <h5>{{ "footer.text2" | transloco }}</h5>
             <div>
               <svg
                 stroke="currentColor"
@@ -111,7 +110,7 @@ import { Component } from "@angular/core";
                 ></path>
               </svg>
               <div>
-                <p>Email</p>
+                <p>{{ "footer.text3" | transloco }}</p>
                 <p>infos@businessname.com</p>
               </div>
             </div>
@@ -130,7 +129,7 @@ import { Component } from "@angular/core";
                 ></path>
               </svg>
               <div>
-                <p>Phone</p>
+                <p>{{ "footer.text4" | transloco }}</p>
                 <p>+123456789</p>
               </div>
             </div>
@@ -149,19 +148,31 @@ import { Component } from "@angular/core";
                 ></path>
               </svg>
               <div>
-                <p>Address</p>
-                <p>123 Business Centre London SW1A 1AA</p>
+                <p>{{ "footer.text5" | transloco }}</p>
+                <p>{{ "footer.text6" | transloco }}</p>
               </div>
             </div>
           </div>
           <div>
-            <h5>Compagny</h5>
-            <p class="link" routerLink="/contact">Contact</p>
-            <p class="future-links">Customer's FAQ <span>SOON</span></p>
-            <p class="future-links">Refund Policy <span>SOON</span></p>
-            <p class="future-links">Privacy Policy <span>SOON</span></p>
-            <p class="future-links">Terms and Conditions <span>SOON</span></p>
-            <p class="future-links">License & Copyright <span>SOON</span></p>
+            <h5>{{ "footer.text7" | transloco }}</h5>
+            <p class="link" routerLink="/contact">
+              {{ "footer.link0" | transloco }}
+            </p>
+            <p class="future-links">
+              {{ "footer.link1" | transloco }} <span>SOON</span>
+            </p>
+            <p class="future-links">
+              {{ "footer.link2" | transloco }} <span>SOON</span>
+            </p>
+            <p class="future-links">
+              {{ "footer.link3" | transloco }} <span>SOON</span>
+            </p>
+            <p class="future-links">
+              {{ "footer.link4" | transloco }} <span>SOON</span>
+            </p>
+            <p class="future-links">
+              {{ "footer.link5" | transloco }} <span>SOON</span>
+            </p>
           </div>
         </div>
       </div>
@@ -178,7 +189,7 @@ import { Component } from "@angular/core";
       .future-links > span {
         font-size: 10px;
         border-radius: 5px;
-        padding : 2px 5px;
+        padding: 2px 5px;
         background-color: #6f6f6f;
         color: #fff;
         position: absolute;

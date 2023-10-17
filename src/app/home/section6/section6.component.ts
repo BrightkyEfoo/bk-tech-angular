@@ -7,9 +7,11 @@ import { data } from "./mock-data";
     <div class="section6-container">
       <div class="section6-container-sub">
         <div class="section6-container-sub-left">
-          <p class="first-title">WHAT OUR CLIENTS SAY ABOUT BK-TECH.</p>
-          <p class="second-title">Over 1200+ Satisfied Clients and Growing</p>
-          <p class="first-title blue-text">Read More Reviews</p>
+          <p class="first-title">{{ "home.section6.title" | transloco }}</p>
+          <p class="second-title">{{ "home.section6.text1" | transloco }}</p>
+          <p class="first-title blue-text">
+            {{ "home.section6.text2" | transloco }}
+          </p>
           <div>
             <!-- <img *ngFor="let el of images" src="{{ el }}" alt="" /> -->
           </div>
@@ -21,7 +23,7 @@ import { data } from "./mock-data";
           <!-- {data.map((el, i) => { return <CustomerDetails key="{i}" {...el} />;
           })} -->
           <div class="customer-details-container" *ngFor="let el of data">
-            <p>{{ el.text }}</p>
+            <p>{{ "home.section6.cards" + el.text + "body" | transloco }}</p>
             <img src="{{ el.photo }}" alt="" />
             <div>
               <p class="name">{{ el.name }}</p>

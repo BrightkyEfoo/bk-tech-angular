@@ -5,19 +5,23 @@ import { Component } from "@angular/core";
   template: `
     <div class="about-section-6-container">
       <div class="about-section-6-container-sub">
-        <span class="title-red">THE TIME MACHINE</span>
-        <h2 class="title-blue">A Timeline of Our Journey</h2>
+        <span class="title-red">{{ "about.section6.title" | transloco }}</span>
+        <h2 class="title-blue">{{ "about.section6.subTitle" | transloco }}</h2>
         <div class="cards-container">
           <div class="about-card-5" *ngFor="let el of cards">
             <div>
-              {{ el.timeTitle }}
-              <small>{{ el.year }}</small>
+              {{ el.timeTitle | transloco }}
+              <small>{{ el.year | transloco }}</small>
             </div>
             <div>
-              <h4 class="title-blue">{{ el.title }}</h4>
-              <p class="simple-about-p">{{ el.body }}</p>
+              <h4 class="title-blue">{{ el.title | transloco }}</h4>
+              <p class="simple-about-p">{{ el.body | transloco }}</p>
               <div class="badges-container" *ngIf="el.badges">
-                <img src="{{ imgEl }}" alt="" *ngFor="let imgEl of el?.badges" />
+                <img
+                  src="{{ imgEl }}"
+                  alt=""
+                  *ngFor="let imgEl of el?.badges"
+                />
               </div>
             </div>
           </div>
@@ -36,16 +40,16 @@ export class AboutSection6Component {
     badges?: string[];
   }[] = [
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-      timeTitle: "Establishment",
-      title: "The Company Born",
-      year: "2005",
+      body: `about.section6.cards0desc`,
+      timeTitle: "about.section6.cards0text1",
+      title: "about.section6.cards0title",
+      year: "about.section6.cards0text2",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-      timeTitle: "Establishment",
-      title: "The Company Born",
-      year: "2005",
+      body: `about.section6.cards1desc`,
+      timeTitle: "about.section6.cards1text1",
+      title: "about.section6.cards1title",
+      year: "about.section6.cards1text2",
       badges: [
         "../../../assets/images/badge.svg",
         "../../../assets/images/badge.svg",
@@ -53,22 +57,22 @@ export class AboutSection6Component {
       ],
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-      timeTitle: "Establishment",
-      title: "The Company Born",
-      year: "2005",
+      body: `about.section6.cards2desc`,
+      timeTitle: "about.section6.cards2text1",
+      title: "about.section6.cards2title",
+      year: "about.section6.cards2text2",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-      timeTitle: "Establishment",
-      title: "The Company Born",
-      year: "2005",
+      body: `about.section6.cards3desc`,
+      timeTitle: "about.section6.cards3text1",
+      title: "about.section6.cards3title",
+      year: "about.section6.cards3text2",
     },
     {
-      body: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
-      timeTitle: "Establishment",
-      title: "The Company Born",
-      year: "2005",
+      body: `about.section6.cards4desc`,
+      timeTitle: "about.section6.cards4text1",
+      title: "about.section6.cards4title",
+      year: "about.section6.cards4text2",
       badges: ["../../../assets/images/badge.svg"],
     },
   ];

@@ -13,7 +13,7 @@ import {
           <div *ngFor="let el of cards">
             <div class="{{ el.colorClass + ' card-1' }}">
               <img src="{{ el.image }}" />
-              <p>{{ el.text }}</p>
+              <p>{{ ("home.section1.cards" + el.text ) | transloco }}</p>
             </div>
           </div>
         </div>
@@ -37,32 +37,32 @@ export class Section1Component implements OnInit , OnDestroy{
   // @ViewChild("swiper") swiper!: ElementRef<SwiperContainer>;
   cards = [
     {
-      text: "Marketing Solution",
+      text: 0,
       image: "../../../assets/images/marketing.png",
       colorClass: "back-3faee5",
     },
     {
-      text: "Car Rental Solution",
+      text: 1,
       image: "../../../assets/images/car-rental.png",
       colorClass: "back-3faee5",
     },
     {
-      text: "VR Solution",
+      text: 2,
       image: "../../../assets/images/vr.png",
       colorClass: "back-3faee5",
     },
     {
-      text: "Custom App Solution",
+      text: 3,
       image: "../../../assets/images/app-develop.png",
       colorClass: "back-3faee5",
     },
     {
-      text: "e-Wallet Solution",
+      text: 4,
       image: "../../../assets/images/ewallet.png",
       colorClass: "back-3faee5",
     },
     {
-      text: "Startup Solution",
+      text: 5,
       image: "../../../assets/images/startup.png",
       colorClass: "back-3faee5",
     },

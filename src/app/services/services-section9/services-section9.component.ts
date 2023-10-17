@@ -5,10 +5,10 @@ import { Component } from "@angular/core";
   template: `
     <div class="services-section-9-container">
       <div class="services-section-9-container-sub">
-        <span class="title-red">SERVICE TESTIMONIALS</span>
-        <h2 class="title-blue">Client Speaks</h2>
+        <span class="title-red">{{ "services.section9.title" | transloco}}</span>
+        <h2 class="title-blue">{{ "services.section9.subTitle" | transloco}}</h2>
         <span class="simple-about-p">
-          Check our customers success stories.
+        {{ "services.section9.desc" | transloco}}
         </span>
         <div>
           <div class="service-about-5" *ngFor="let el of cards">
@@ -28,10 +28,10 @@ import { Component } from "@angular/core";
               </svg>
               <img src="{{ el.image }}" alt="" />
             </div>
-            <p class="simple-about-p">{{ el.desc }}</p>
+            <p class="simple-about-p">{{ el.desc | transloco }}</p>
             <div>
-              <h5>{{ el.name }}</h5>
-              <p>{{ el.subDesc }}</p>
+              <h5>{{ el.name | transloco }}</h5>
+              <p>{{ el.subDesc | transloco }}</p>
               
               <!-- <Rating name="read-only" value={stars} readOnly={true} /> -->
             </div>
@@ -56,24 +56,24 @@ export class ServicesSection9Component {
     stars: number;
   }[] = [
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      desc: `services.section9.cards0text1`,
       image: "../../../assets/images/envato.png",
-      name: "John DOE",
-      subDesc: "Business Owner, Jaipur",
+      name: "services.section9.cards0text2",
+      subDesc: "services.section9.cards0text3",
       stars: 4,
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      desc: `services.section9.cards0text1`,
       image: "./../../assets/images/envato.png",
-      name: "John DOE",
-      subDesc: "Business Owner, Jaipur",
+      name: "services.section9.cards0text2",
+      subDesc: "services.section9.cards1text3",
       stars: 3,
     },
     {
-      desc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      desc: `services.section9.cards0text1`,
       image: "./../../assets/images/envato.png",
-      name: "John DOE",
-      subDesc: "Business Owner, Jaipur",
+      name: "services.section9.cards0text2",
+      subDesc: "services.section9.cards2text3",
       stars: 4,
     },
   ];

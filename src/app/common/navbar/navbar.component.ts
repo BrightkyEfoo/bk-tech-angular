@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { MatIconModule } from "@angular/material/icon";
 import { Breakpoints, BreakpointObserver } from "@angular/cdk/layout";
+import { TranslocoService } from "@ngneat/transloco";
 
 type Link = {
   text: string;
@@ -15,7 +16,7 @@ type Link = {
 export class NavbarComponent implements OnInit {
   links: Link[] = [
     {
-      text: "acceuil",
+      text: "home",
       link: "/",
     },
     {
@@ -32,7 +33,11 @@ export class NavbarComponent implements OnInit {
   colorChange: boolean = false;
   isMobile: boolean = false;
   isMobNavVisible: boolean = false;
-  constructor(private router: Router, private responsive: BreakpointObserver) {}
+  constructor(
+    private router: Router,
+    private responsive: BreakpointObserver,
+    private translocoService: TranslocoService
+  ) {}
   ngOnInit(): void {
     window.addEventListener("scroll", () => {
       this.changeNavbarColor();
@@ -44,7 +49,9 @@ export class NavbarComponent implements OnInit {
         this.isMobile = false;
       }
     });
+    this.actualLang = this.translocoService.getActiveLang()
   }
+  actualLang = "fr";
   goHome() {}
   isActualRoute(el: Link) {
     if (el.link === "/") {
@@ -64,12 +71,22 @@ export class NavbarComponent implements OnInit {
     }
   };
 
-  handleMobClick(e : MouseEvent){
-      if (e.currentTarget === e.target) {
-        this.isMobNavVisible = false
-      }
+  handleMobClick(e: MouseEvent) {
+    if (e.currentTarget === e.target) {
+      this.isMobNavVisible = false;
+    }
   }
   handleToggleMenu() {
     this.isMobNavVisible = !this.isMobNavVisible;
+  }
+
+  changeLang() {
+    if (this.actualLang === "en") {
+      this.actualLang = "fr";
+      this.translocoService.setActiveLang(this.actualLang);
+    } else {
+      this.actualLang = "en";
+      this.translocoService.setActiveLang(this.actualLang);
+    }
   }
 }

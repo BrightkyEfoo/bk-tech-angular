@@ -5,11 +5,9 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
   template: `
     <div class="about-section-7-container">
       <div class="about-section-7-container-sub">
-        <h2 class="title-blue">Meet Our Team</h2>
+        <h2 class="title-blue">{{ "about.section7.title" | transloco }}</h2>
         <p class="simple-about-p">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry.
+          {{ "about.section7.subTitle" | transloco }}
         </p>
         <div
           class="about-section7-container-slider"
@@ -23,7 +21,7 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
             <div>
               <p class="title-blue">{{ el.name }}</p>
               <p class="title-red">{{ el.poste }}</p>
-              <p class="simple-about-p">{{ el.text }}</p>
+              <p class="simple-about-p">{{ el.text | transloco }}</p>
             </div>
           </div>
           <div class="pagination-container-about-section-7">
@@ -45,13 +43,13 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 export class AboutSection7Component implements OnInit, OnDestroy {
   data = [
     {
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      text: `about.section7.cards0desc`,
       photo: "../../../assets/images/team-single.jpg",
       name: "bikos maximus",
       poste: "CEO",
     },
     {
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+      text: `about.section7.cards1desc`,
       photo: "../../../assets/images/team-single.jpg",
       name: "bikos maximus",
       poste: "CEO",

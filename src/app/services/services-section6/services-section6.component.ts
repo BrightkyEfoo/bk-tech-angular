@@ -5,25 +5,29 @@ import { Component } from "@angular/core";
   template: `
     <div class="services-section-6-container">
       <div class="services-section-6-container-sub">
-        <span class="title-red">WE DELIVER OUR BEST</span>
-        <h2 class="title-blue">Why Choose BK-ECH</h2>
-        <p class="simple-about-p">
-          Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem.
-          In vel hendrerit nisi. Vestibulum eget risus velit.
-        </p>
+        <span class="title-red">{{
+          "services.section6.title" | transloco
+        }}</span>
+        <h2 class="title-blue">
+          {{ "services.section6.subTitle" | transloco }}
+        </h2>
+        <p class="simple-about-p">{{ "services.section6.desc" | transloco }}</p>
         <div>
           <div class="services-card-1" *ngFor="let el of cards">
             <img src="{{ el.image }}" alt="" />
             <div>
-              <h3 class="title-blue">{{ el.title }}</h3>
-              <p class="simple-about-p">{{ el.desc }}</p>
+              <h3 class="title-blue">{{ el.title | transloco }}</h3>
+              <p class="simple-about-p">{{ el.desc | transloco }}</p>
             </div>
           </div>
         </div>
         <div>
-          Let's Start a <span>New Project</span> Together
+          {{ "services.section6.text1" | transloco }}
+          <span>{{ "services.section6.text2" | transloco }}</span>
+          {{ "services.section6.text3" | transloco }}
           <button class="quote-button">
-            Meet Our Team<span class="circle"></span>
+            {{ "services.section6.button" | transloco }}
+            <span class="circle"></span>
           </button>
         </div>
       </div>
@@ -43,34 +47,34 @@ export class ServicesSection6Component {
     desc: string;
   }[] = [
     {
-      desc: "In vel hendrerit nisi. Vestibulum eget risus velit.",
+      desc: "services.section6.cards0desc",
       image: "../../../assets/images/teama.svg",
-      title: "Reliable Service. In House Team",
+      title: "services.section6.cards0title",
     },
     {
-      desc: "In vel hendrerit nisi. Vestibulum eget risus velit.",
+      desc: "services.section6.cards1desc",
       image: "../../../assets/images/link.svg",
-      title: "Trusted by People Like You",
+      title: "services.section6.cards1title",
     },
     {
-      desc: "In vel hendrerit nisi. Vestibulum eget risus velit.",
+      desc: "services.section6.cards2desc",
       image: "../../../assets/images/tech.svg",
-      title: "Complete Technical Competency",
+      title: "services.section6.cards2title",
     },
     {
-      desc: "In vel hendrerit nisi. Vestibulum eget risus velit.",
+      desc: "services.section6.cards3desc",
       image: "../../../assets/images/tech.svg",
-      title: "Friendly & Cordial in Nature",
+      title: "services.section6.cards3title",
     },
     {
-      desc: "In vel hendrerit nisi. Vestibulum eget risus velit.",
+      desc: "services.section6.cards4desc",
       image: "../../../assets/images/badge.svg",
-      title: "Excellent Quality Delivered on Time",
+      title: "services.section6.cards4title",
     },
     {
-      desc: "In vel hendrerit nisi. Vestibulum eget risus velit.",
+      desc: "services.section6.cards5desc",
       image: "../../../assets/images/tin.svg",
-      title: "Effective & Continuous Communication",
+      title: "services.section6.cards5title",
     },
   ];
 }

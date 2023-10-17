@@ -9,22 +9,12 @@ import { Component } from "@angular/core";
           <img src="../../../assets/images/cheerful-businessman.jpg" />
         </div>
         <div>
-          <span>Chairman's message</span>
-          <h2>Bikos Maximus</h2>
-          <p>Founder, Chairman & CFO</p>
-          <p>
-            <!-- <FaQuoteLeft /> -->
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. Lorem Ipsum is simply
-            dummy text of the printing and typesetting industry. Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry. is
-            simply dummy text of the printing and typesetting industry.
-            <!-- <FaQuoteRight /> -->
-          </p>
+          <span>{{"about.section2.title" | transloco}}</span>
+          <h2>{{"about.section2.subTitle" | transloco}}</h2>
+          <p>{{"about.section2.text1" | transloco}}</p>
+          <p>{{"about.section2.text2" | transloco}}</p>
           <button class="quote-button">
-            Meet Our Team
+            {{"about.section2.button" | transloco}}
             <span class="circle"></span>
           </button>
         </div>
